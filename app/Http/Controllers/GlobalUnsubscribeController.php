@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\PortingPhones;
+use App\GlobalUnsubscribe;
 use Illuminate\Http\Request;
 
-class PortingPhonesController extends Controller
+class GlobalUnsubscribeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class PortingPhonesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\PortingPhones  $portingPhones
+     * @param  \App\GlobalUnsubscribe  $globalUnsubscribe
      * @return \Illuminate\Http\Response
      */
-    public function show(PortingPhones $portingPhones)
+    public function show(GlobalUnsubscribe $globalUnsubscribe)
     {
         //
     }
@@ -52,10 +52,10 @@ class PortingPhonesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\PortingPhones  $portingPhones
+     * @param  \App\GlobalUnsubscribe  $globalUnsubscribe
      * @return \Illuminate\Http\Response
      */
-    public function edit(PortingPhones $portingPhones)
+    public function edit(GlobalUnsubscribe $globalUnsubscribe)
     {
         //
     }
@@ -64,10 +64,10 @@ class PortingPhonesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\PortingPhones  $portingPhones
+     * @param  \App\GlobalUnsubscribe  $globalUnsubscribe
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PortingPhones $portingPhones)
+    public function update(Request $request, GlobalUnsubscribe $globalUnsubscribe)
     {
         //
     }
@@ -75,10 +75,10 @@ class PortingPhonesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\PortingPhones  $portingPhones
+     * @param  \App\GlobalUnsubscribe  $globalUnsubscribe
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PortingPhones $portingPhones)
+    public function destroy(GlobalUnsubscribe $globalUnsubscribe)
     {
         //
     }
