@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\PartnerFilterWebmasterBlocks;
+use App\PartnerFilterWebmasterBlock;
 use Illuminate\Http\Request;
 
 class PartnerFilterWebmasterBlocksController extends Controller
@@ -41,10 +41,10 @@ class PartnerFilterWebmasterBlocksController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\PartnerFilterWebmasterBlocks  $partnerFilterWebmasterBlocks
+     * @param  \App\PartnerFilterWebmasterBlock  $partnerFilterWebmasterBlocks
      * @return \Illuminate\Http\Response
      */
-    public function show(PartnerFilterWebmasterBlocks $partnerFilterWebmasterBlocks)
+    public function show(PartnerFilterWebmasterBlock $partnerFilterWebmasterBlocks)
     {
         //
     }
@@ -52,10 +52,10 @@ class PartnerFilterWebmasterBlocksController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\PartnerFilterWebmasterBlocks  $partnerFilterWebmasterBlocks
+     * @param  \App\PartnerFilterWebmasterBlock  $partnerFilterWebmasterBlocks
      * @return \Illuminate\Http\Response
      */
-    public function edit(PartnerFilterWebmasterBlocks $partnerFilterWebmasterBlocks)
+    public function edit(PartnerFilterWebmasterBlock $partnerFilterWebmasterBlocks)
     {
         //
     }
@@ -64,10 +64,10 @@ class PartnerFilterWebmasterBlocksController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\PartnerFilterWebmasterBlocks  $partnerFilterWebmasterBlocks
+     * @param  \App\PartnerFilterWebmasterBlock  $partnerFilterWebmasterBlocks
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PartnerFilterWebmasterBlocks $partnerFilterWebmasterBlocks)
+    public function update(Request $request, PartnerFilterWebmasterBlock $partnerFilterWebmasterBlocks)
     {
         //
     }
@@ -75,10 +75,10 @@ class PartnerFilterWebmasterBlocksController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\PartnerFilterWebmasterBlocks  $partnerFilterWebmasterBlocks
+     * @param  \App\PartnerFilterWebmasterBlock  $partnerFilterWebmasterBlocks
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PartnerFilterWebmasterBlocks $partnerFilterWebmasterBlocks)
+    public function destroy(PartnerFilterWebmasterBlock $partnerFilterWebmasterBlocks)
     {
         //
     }

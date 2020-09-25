@@ -2,18 +2,18 @@
 
 namespace Database\Factories;
 
-use App\PartnerFilterWebmasterBlocks;
+use App\PartnerFilterWebmasterBlock;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-class PartnerFilterWebmasterBlocksFactory extends Factory
+class PartnerFilterWebmasterBlockFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = PartnerFilterWebmasterBlocks::class;
+    protected $model = PartnerFilterWebmasterBlock::class;
 
     /**
      * Define the model's default state.
@@ -24,7 +24,7 @@ class PartnerFilterWebmasterBlocksFactory extends Factory
     {
         return [
             'campaignId'      => 203,
-            'webmasterId'     => 1036, // 1055
+            'webmasterId'     => $this->faker->randomElement([1036, 1055]),
             'channelId'       => null,
             'sourceId'        => null,
             'ssid'            => null,
