@@ -2,13 +2,7 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
-class PortingPhone extends Model
+class PortingPhone extends BaseModel
 {
-    protected $guarded = [];
-
-    public $timestamps = false;
-
     protected $table = 'porting_phone_import';
 }
