@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LeadOverbidController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/lead-over-bid', [LeadOverbidController::class, 'insertRecords'])->name('lead.overbid');
+Route::get('/lead-over-bid/truncate', [LeadOverbidController::class, 'truncateTable'])->name('lead.overbid.truncate');
+
+Route::get('/lead-over-bid-black-list', [LeadOverbidController::class, 'insertRecords']);
