@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://35.188.128.156:3306/inst291</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="DOCKER@172.19.0.102" single-connection="true" uuid="cab1bba4-cebc-401c-9ea1-a86fdaf1a17d">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://172.19.0.102:3306/inst35_2021_02_17</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

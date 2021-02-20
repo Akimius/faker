@@ -23,18 +23,28 @@ class LeadOverbidFactory extends Factory
      */
     public function definition(): array
     {
+        $campaignsWithPartners = $this->getCampaignsWithPartners();
+
+        $campaignId = array_rand($campaignsWithPartners);
+        $partnerId = $campaignsWithPartners[$campaignId];
+
+        $overBidCampaignId = array_rand($campaignsWithPartners);
+        $overBidPartnerId = $campaignsWithPartners[$overBidCampaignId];
+
 
         return [
             'creationDatetime' => now(),
             'leadId'            => $this->faker->randomElement($this->getLeadIds()),
-            'partnerId'         => $this->faker->randomElement($this->getPartnerIds()),
-            'campaignId'        => $this->faker->randomElement($this->getCampaignIds()),
+
+            'partnerId'         => $partnerId,
+            'campaignId'        => $campaignId,
+
             'oldBid'            => random_int(10, 20),
             'newBid'            => random_int(20, 30),
             'overBid'           => random_int(1, 2),
             'status'            => $this->faker->randomElement([0, 1, 2]),
-            'overBidPartnerId'  => $this->faker->randomElement($this->getPartnerIds()),
-            'overBidCampaignId' => $this->faker->randomElement($this->getCampaignIds())
+            'overBidPartnerId'  => $overBidPartnerId,
+            'overBidCampaignId' => $overBidCampaignId
         ];
     }
 
@@ -46,11 +56,13 @@ class LeadOverbidFactory extends Factory
             ->toArray();
     }
 
-    private function getCampaignIds(): array
+    private function getCampaignsWithPartners(): array
     {
         return DB::table('partner_campaign')
+            ->where('status', '=', 1)
             ->take(10)
-            ->pluck('id')
+            ->orderBy('id', 'asc')
+            ->pluck('partnerId', 'id')
             ->toArray();
     }
 
@@ -58,7 +70,7 @@ class LeadOverbidFactory extends Factory
     {
         return DB::table('lead_body_paydayus')
             //->where('name', 'John')
-            ->take(5)
+            ->take(10)
             ->pluck('id')
             ->toArray();
     }
