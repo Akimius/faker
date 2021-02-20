@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\BaseModel;
-use App\LeadOverbid;
+use App\LeadOverbidBlackList;
 
-class LeadOverbidController extends AbstractBaseController
+class LeadOverbidBlackListController extends AbstractBaseController
 {
     /**
      * @var BaseModel
@@ -22,6 +22,6 @@ class LeadOverbidController extends AbstractBaseController
      */
     protected function getModel(): BaseModel
     {
-        return new LeadOverbid();
+        return new LeadOverbidBlackList();
     }
 }
