@@ -10,7 +10,7 @@ class LeadOverbidBlackListController extends AbstractBaseController
     /**
      * @var BaseModel
      */
-    protected BaseModel $model;
+    protected $model;
 
     public function __construct()
     {

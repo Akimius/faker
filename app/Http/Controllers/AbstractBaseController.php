@@ -9,7 +9,7 @@ abstract class AbstractBaseController extends Controller
     /**
      * @var BaseModel
      */
-    protected BaseModel $model;
+    protected $model;
 
     /**
      * @return BaseModel
