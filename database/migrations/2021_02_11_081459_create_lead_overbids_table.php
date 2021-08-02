@@ -13,20 +13,20 @@ class CreateLeadOverbidsTable extends Migration
      */
     public function up(): void
     {
-        Schema::create('lead_overbid', function (Blueprint $table) {
-            $table->id();
-            $table->timestamp('creationDatetime')->default(now());
-            $table->integer('leadId');
-            //$table->string('email');
-            $table->integer('partnerId');
-            $table->integer('campaignId');
-            $table->integer('oldBid'); // USD
-            $table->integer('newBid'); // USD
-            $table->integer('overBid'); // USD
-            $table->integer('status')->default(0);
-            $table->integer('overBidPartnerId');
-            $table->integer('overBidCampaignId');
-        });
+//        Schema::create('lead_overbid', function (Blueprint $table) {
+//            $table->id();
+//            $table->timestamp('creationDatetime')->default(now());
+//            $table->integer('leadId');
+//            //$table->string('email');
+//            $table->integer('partnerId');
+//            $table->integer('campaignId');
+//            $table->integer('oldBid'); // USD
+//            $table->integer('newBid'); // USD
+//            $table->integer('overBid'); // USD
+//            $table->integer('status')->default(0);
+//            $table->integer('overBidPartnerId');
+//            $table->integer('overBidCampaignId');
+//        });
     }
 
     /**
@@ -36,6 +36,6 @@ class CreateLeadOverbidsTable extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lead_overbid');
+        //Schema::dropIfExists('lead_overbid');
     }
 }
