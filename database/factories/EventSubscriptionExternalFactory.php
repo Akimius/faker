@@ -22,11 +22,11 @@ class EventSubscriptionExternalFactory extends Factory
     public function definition(): array
     {
         return [
-            'eventId'            => $this->faker->randomElement([8]),
+            'eventId'            => $this->faker->randomElement([1, 8]),
             'eventTarget'        => null,
             'eventSubTarget'     => null,
             'recipientTypeId'    => $this->faker->randomElement([1, 2, 3]),
-            'recipientChannelId' => $this->faker->randomElement([1, 2, 3, 4, 5, 6]),
+            'recipientChannelId' => 1, //$this->faker->randomElement([1, 2, 3, 4, 5, 6]),
             'recipientValue'     => $this->faker->companyEmail,
             'isHidden'           => false,
         ];
