@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::post('/webhook', static function () {
+    \Illuminate\Support\Facades\Log::info(request()->getContent());
 });
 
 //LeadOverbid
